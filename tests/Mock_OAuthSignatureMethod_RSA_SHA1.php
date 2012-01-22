@@ -1,5 +1,7 @@
 <?php
 
+use OAuth\OAuthSignatureMethod_RSA_SHA1;
+
 /**
  * A mock implementation of OAuthSignatureMethod_RSA_SHA1
  * Always returns the signatures described in 

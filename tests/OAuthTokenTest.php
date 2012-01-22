@@ -1,5 +1,7 @@
 <?php
 
+use OAuth\OAuthToken;
+
 require_once 'common.php';
 
 class OAuthTokenTest extends PHPUnit_Framework_TestCase {

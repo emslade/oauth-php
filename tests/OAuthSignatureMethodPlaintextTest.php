@@ -1,4 +1,7 @@
 <?php
+use OAuth\OAuthSignatureMethod_PLAINTEXT;
+use OAuth\OAuthConsumer;
+use OAuth\OAuthToken;
 
 require_once 'common.php';
 require_once 'Mock_OAuthBaseStringRequest.php';

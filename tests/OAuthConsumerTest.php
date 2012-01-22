@@ -1,5 +1,7 @@
 <?php
 
+use OAuth\OAuthConsumer;
+
 require 'common.php';
 
 class OAuthConsumerTest extends PHPUnit_Framework_TestCase {

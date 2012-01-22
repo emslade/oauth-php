@@ -1,5 +1,7 @@
 <?php
 
+use OAuth\OAuthUtil;
+
 require_once dirname(__FILE__) . '/common.php';
 
 /**

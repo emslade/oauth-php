@@ -1,5 +1,7 @@
 <?php
 
+use OAuth\OAuthRequest;
+
 require dirname(__FILE__).'/../lib/OAuth/OAuth.php';
 
 /**

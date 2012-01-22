@@ -1,5 +1,10 @@
 <?php
 
+use OAuth\OAuthDataStore;
+use OAuth\OAuthConsumer;
+use OAuth\OAuthToken;
+use OAuth\OAuthRequest;
+
 /**
  * A mock store for testing
  */

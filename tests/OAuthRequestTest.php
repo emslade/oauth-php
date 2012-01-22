@@ -1,5 +1,11 @@
 <?php
 
+use OAuth\OAuthRequest;
+use OAuth\OAuthConsumer;
+use OAuth\OAuthToken;
+use OAuth\OAuthSignatureMethod_PLAINTEXT;
+use OAuth\OAuthSignatureMethod_HMAC_SHA1;
+
 /*
  * Tests of OAuthRequest
  *
@@ -239,7 +245,7 @@ class OAuthRequestTest extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testWontBuildHeaderWithArrayInput() {
-		$this->setExpectedException('OAuthException');
+		$this->setExpectedException('OAuth\OAuthException');
 		OAuthTestUtils::build_request('POST', 'http://example.com', 'oauth_foo=bar&oauth_foo=baz');
 		OAuthRequest::from_request()->to_header();
 	}

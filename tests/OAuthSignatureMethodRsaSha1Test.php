@@ -1,4 +1,5 @@
 <?php
+use OAuth\OAuthConsumer;
 
 require_once 'common.php';
 require_once 'Mock_OAuthBaseStringRequest.php';
