@@ -1,13 +1,13 @@
 <?php
 
-use OAuth\OAuthSignatureMethod_RSA_SHA1;
+use OAuth\SignatureMethod\RSA_SHA1;
 
 /**
- * A mock implementation of OAuthSignatureMethod_RSA_SHA1
+ * A mock implementation of SignatureMethod\SignatureMethod_RSA_SHA1
  * Always returns the signatures described in 
  * http://wiki.oauth.net/TestCases section 9.3 ("RSA-SHA1")
  */
-class Mock_OAuthSignatureMethod_RSA_SHA1 extends OAuthSignatureMethod_RSA_SHA1 {
+class Mock_SignatureMethod_RSA_SHA1 extends RSA_SHA1 {
   public function fetch_private_cert(&$request) {
     $cert = <<<EOD
 -----BEGIN PRIVATE KEY-----

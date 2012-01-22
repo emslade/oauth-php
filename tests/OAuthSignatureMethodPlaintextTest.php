@@ -1,16 +1,16 @@
 <?php
-use OAuth\OAuthSignatureMethod_PLAINTEXT;
+use OAuth\SignatureMethod\SignatureMethod_PLAINTEXT;
 use OAuth\Consumer;
 use OAuth\Token;
 
 require_once 'common.php';
 require_once 'Mock_OAuthBaseStringRequest.php';
 
-class OAuthSignatureMethodPlaintextTest extends PHPUnit_Framework_TestCase {
+class SignatureMethodPlaintextTest extends PHPUnit_Framework_TestCase {
 	private $method;
 	
 	public function setUp() {
-		$this->method = new OAuthSignatureMethod_PLAINTEXT();
+		$this->method = new OAuth\SignatureMethod\PLAINTEXT();
 	}
 	
 	public function testIdentifyAsPlaintext() {

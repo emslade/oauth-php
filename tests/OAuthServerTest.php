@@ -3,8 +3,8 @@
 use OAuth\Consumer;
 use OAuth\OAuthServer;
 use OAuth\Token;
-use OAuth\OAuthSignatureMethod_HMAC_SHA1;
-use OAuth\OAuthSignatureMethod_PLAINTEXT;
+use OAuth\SignatureMethod\SignatureMethod_HMAC_SHA1;
+use OAuth\SignatureMethod\SignatureMethod_PLAINTEXT;
 use OAuth\OAuthRequest;
 
 require_once dirname(__FILE__) . '/common.php';
@@ -26,8 +26,8 @@ class OAuthServerTest extends PHPUnit_Framework_TestCase {
 		$this->request_token  = new Token('requestkey', 'requestsecret');
 		$this->access_token   = new Token('accesskey', 'accesssecret');
 		
-		$this->hmac_sha1      = new OAuthSignatureMethod_HMAC_SHA1();
-		$this->plaintext      = new OAuthSignatureMethod_PLAINTEXT();
+		$this->hmac_sha1      = new OAuth\SignatureMethod\HMAC_SHA1();
+		$this->plaintext      = new OAuth\SignatureMethod\PLAINTEXT();
 		
 		$this->server         = new OAuthServer( new Mock_OAuthDataStore() );
 		$this->server->add_signature_method( $this->hmac_sha1 );

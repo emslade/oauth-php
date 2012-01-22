@@ -1,16 +1,16 @@
 <?php
-use OAuth\OAuthSignatureMethod_HMAC_SHA1;
+use OAuth\SignatureMethod\HMAC_SHA1;
 use OAuth\Consumer;
 use OAuth\Token;
 
 require_once 'common.php';
 require_once 'Mock_OAuthBaseStringRequest.php';
 
-class OAuthSignatureMethodHmacSha1Test extends PHPUnit_Framework_TestCase {
+class SignatureMethodHmacSha1Test extends PHPUnit_Framework_TestCase {
 	private $method;
 	
 	public function setUp() {
-		$this->method = new OAuthSignatureMethod_HMAC_SHA1();
+		$this->method = new HMAC_SHA1();
 	}
 	
 	public function testIdentifyAsHmacSha1() {

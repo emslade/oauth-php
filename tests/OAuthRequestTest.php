@@ -3,8 +3,8 @@
 use OAuth\OAuthRequest;
 use OAuth\Consumer;
 use OAuth\Token;
-use OAuth\OAuthSignatureMethod_PLAINTEXT;
-use OAuth\OAuthSignatureMethod_HMAC_SHA1;
+use OAuth\SignatureMethod\SignatureMethod_PLAINTEXT;
+use OAuth\SignatureMethod\SignatureMethod_HMAC_SHA1;
 
 /*
  * Tests of OAuthRequest
@@ -291,8 +291,8 @@ class OAuthRequestTest extends PHPUnit_Framework_TestCase {
 		$cons = new Consumer('key', 'kd94hf93k423kf44');
 		$token = new Token('token', 'pfkkdhi9sl3r4s00');
 		
-		$hmac = new OAuthSignatureMethod_HMAC_SHA1();
-		$plaintext = new OAuthSignatureMethod_PLAINTEXT();
+		$hmac = new OAuth\SignatureMethod\HMAC_SHA1();
+		$plaintext = new OAuth\SignatureMethod\PLAINTEXT();
 		
 		$this->assertEquals('tR3+Ty81lMeYAr/Fid0kMTYa/WM=', $r->build_signature($hmac, $cons, $token));
 		$this->assertEquals('kd94hf93k423kf44&pfkkdhi9sl3r4s00', $r->build_signature($plaintext, $cons, $token));
@@ -308,8 +308,8 @@ class OAuthRequestTest extends PHPUnit_Framework_TestCase {
 		$cons = new Consumer('key', 'kd94hf93k423kf44');
 		$token = new Token('token', 'pfkkdhi9sl3r4s00');
 		
-		$hmac = new OAuthSignatureMethod_HMAC_SHA1();
-		$plaintext = new OAuthSignatureMethod_PLAINTEXT();
+		$hmac = new OAuth\SignatureMethod\HMAC_SHA1();
+		$plaintext = new OAuth\SignatureMethod\PLAINTEXT();
 		
 		// We need to test both what the parameter is, and how the serialized request is..
 		

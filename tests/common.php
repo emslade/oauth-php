@@ -6,6 +6,10 @@ require dirname(__FILE__).'/../lib/OAuth/OAuth.php';
 require dirname(__FILE__).'/../lib/OAuth/Exception.php';
 require dirname(__FILE__).'/../lib/OAuth/Consumer.php';
 require dirname(__FILE__).'/../lib/OAuth/Token.php';
+require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/SignatureMethod.php';
+require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/RSA_SHA1.php';
+require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/HMAC_SHA1.php';
+require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/PLAINTEXT.php';
 
 /**
  * A simple utils class for methods needed
