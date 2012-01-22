@@ -1,7 +1,7 @@
 <?php
 
 use OAuth\Consumer;
-use OAuth\OAuthServer;
+use OAuth\Server;
 use OAuth\Token;
 use OAuth\SignatureMethod\SignatureMethod_HMAC_SHA1;
 use OAuth\SignatureMethod\SignatureMethod_PLAINTEXT;
@@ -29,7 +29,7 @@ class OAuthServerTest extends PHPUnit_Framework_TestCase {
 		$this->hmac_sha1      = new OAuth\SignatureMethod\HMAC_SHA1();
 		$this->plaintext      = new OAuth\SignatureMethod\PLAINTEXT();
 		
-		$this->server         = new OAuthServer( new Mock_OAuthDataStore() );
+		$this->server         = new \OAuth\Server( new Mock_OAuthDataStore() );
 		$this->server->add_signature_method( $this->hmac_sha1 );
 		$this->server->add_signature_method( $this->plaintext );
 	}
@@ -162,7 +162,7 @@ class OAuthServerTest extends PHPUnit_Framework_TestCase {
 		$request = OAuth\Request::from_consumer_and_token( $this->consumer, $this->access_token, 'POST', 'http://example.com');
 		$request->sign_request( $this->plaintext, $this->consumer, $this->access_token );
 		
-		$server = new OAuthServer( new Mock_OAuthDataStore() );
+		$server = new \OAuth\Server( new Mock_OAuthDataStore() );
 		$server->add_signature_method( $this->hmac_sha1 );
 		
 		$this->setExpectedException('OAuth\Exception');
