@@ -141,7 +141,7 @@ class OAuthRequestTest extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testNormalizeParameters() {
-		// This is mostly repeats of OAuthUtilTest::testParseParameters & OAuthUtilTest::TestBuildHttpQuery
+		// This is mostly repeats of \OAuth\UtilTest::testParseParameters & OAuthUtilTest::TestBuildHttpQuery
 
 		// Tests taken from
 		// http://wiki.oauth.net/TestCases ("Normalize Request Parameters")

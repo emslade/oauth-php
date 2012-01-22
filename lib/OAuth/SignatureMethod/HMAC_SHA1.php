@@ -22,7 +22,7 @@ class HMAC_SHA1 extends SignatureMethod {
       ($token) ? $token->secret : ""
     );
 
-    $key_parts = \OAuth\OAuthUtil::urlencode_rfc3986($key_parts);
+    $key_parts = \OAuth\Util::urlencode_rfc3986($key_parts);
     $key = implode('&', $key_parts);
 
     return base64_encode(hash_hmac('sha1', $base_string, $key, true));

@@ -9,6 +9,7 @@ require dirname(__FILE__).'/../lib/OAuth/Token.php';
 require dirname(__FILE__).'/../lib/OAuth/Request.php';
 require dirname(__FILE__).'/../lib/OAuth/Server.php';
 require dirname(__FILE__).'/../lib/OAuth/DataStore.php';
+require dirname(__FILE__).'/../lib/OAuth/Util.php';
 require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/SignatureMethod.php';
 require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/RSA_SHA1.php';
 require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/HMAC_SHA1.php';
