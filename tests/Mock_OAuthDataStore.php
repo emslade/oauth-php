@@ -2,7 +2,7 @@
 
 use OAuth\OAuthDataStore;
 use OAuth\Consumer;
-use OAuth\OAuthToken;
+use OAuth\Token;
 use OAuth\OAuthRequest;
 
 /**
@@ -16,8 +16,8 @@ class Mock_OAuthDataStore extends OAuthDataStore {
 
 	function __construct() {
 		$this->consumer = new Consumer("key", "secret", NULL);
-		$this->request_token = new OAuthToken("requestkey", "requestsecret", 1);
-		$this->access_token = new OAuthToken("accesskey", "accesssecret", 1);
+		$this->request_token = new Token("requestkey", "requestsecret", 1);
+		$this->access_token = new Token("accesskey", "accesssecret", 1);
 		$this->nonce = "nonce";
 	}
 
