@@ -26,7 +26,7 @@ class OAuthServerTest extends PHPUnit_Framework_TestCase {
 		$this->request_token  = new Token('requestkey', 'requestsecret');
 		$this->access_token   = new Token('accesskey', 'accesssecret');
 		
-		$this->hmac_sha1      = new OAuth\SignatureMethod\HMAC_SHA1();
+		$this->hmac_sha1      = new OAuth\SignatureMethod\HMACSHA1();
 		$this->plaintext      = new OAuth\SignatureMethod\PLAINTEXT();
 		
 		$this->server         = new \OAuth\Server( new Mock_OAuthDataStore() );

@@ -1,5 +1,5 @@
 <?php
-use OAuth\SignatureMethod\HMAC_SHA1;
+use OAuth\SignatureMethod\HMACSHA1;
 use OAuth\Consumer;
 use OAuth\Token;
 
@@ -10,7 +10,7 @@ class SignatureMethodHmacSha1Test extends PHPUnit_Framework_TestCase {
 	private $method;
 	
 	public function setUp() {
-		$this->method = new HMAC_SHA1();
+		$this->method = new HMACSHA1();
 	}
 	
 	public function testIdentifyAsHmacSha1() {

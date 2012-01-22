@@ -11,7 +11,7 @@ require dirname(__FILE__).'/../lib/OAuth/DataStore.php';
 require dirname(__FILE__).'/../lib/OAuth/Util.php';
 require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/SignatureMethod.php';
 require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/RSA_SHA1.php';
-require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/HMAC_SHA1.php';
+require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/HMACSHA1.php';
 require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/PLAINTEXT.php';
 
 /**

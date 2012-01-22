@@ -8,7 +8,7 @@ namespace OAuth\SignatureMethod;
  * character (ASCII code 38) even if empty.
  *   - Chapter 9.2 ("HMAC-SHA1")
  */
-class HMAC_SHA1 extends SignatureMethod {
+class HMACSHA1 extends SignatureMethod {
   function get_name() {
     return "HMAC-SHA1";
   }
