@@ -1,6 +1,6 @@
 <?php
 
-require dirname(__FILE__).'/../OAuth.php';
+require dirname(__FILE__).'/../lib/OAuth/OAuth.php';
 
 /**
  * A simple utils class for methods needed
