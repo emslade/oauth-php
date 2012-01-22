@@ -2,7 +2,6 @@
 
 use OAuth\OAuthRequest;
 
-require dirname(__FILE__).'/../lib/OAuth/OAuth.php';
 require dirname(__FILE__).'/../lib/OAuth/Exception.php';
 require dirname(__FILE__).'/../lib/OAuth/Consumer.php';
 require dirname(__FILE__).'/../lib/OAuth/Token.php';
