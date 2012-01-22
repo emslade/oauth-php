@@ -3,6 +3,7 @@
 use OAuth\OAuthRequest;
 
 require dirname(__FILE__).'/../lib/OAuth/OAuth.php';
+require dirname(__FILE__).'/../lib/OAuth/Exception.php';
 
 /**
  * A simple utils class for methods needed
