@@ -1,6 +1,6 @@
 <?php
 
-use OAuth\OAuthDataStore;
+use OAuth\DataStore;
 use OAuth\Consumer;
 use OAuth\Token;
 use OAuth\OAuthRequest;
@@ -8,7 +8,7 @@ use OAuth\OAuthRequest;
 /**
  * A mock store for testing
  */
-class Mock_OAuthDataStore extends OAuthDataStore {
+class Mock_OAuthDataStore extends DataStore {
 	private $consumer;
 	private $request_token;
 	private $access_token;
