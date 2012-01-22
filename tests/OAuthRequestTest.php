@@ -1,7 +1,7 @@
 <?php
 
 use OAuth\OAuthRequest;
-use OAuth\OAuthConsumer;
+use OAuth\Consumer;
 use OAuth\OAuthToken;
 use OAuth\OAuthSignatureMethod_PLAINTEXT;
 use OAuth\OAuthSignatureMethod_HMAC_SHA1;
@@ -72,7 +72,7 @@ class OAuthRequestTest extends PHPUnit_Framework_TestCase {
 	}
 	
 	public function testCreateRequestFromConsumerAndToken() {
-		$cons = new OAuthConsumer('key', 'kd94hf93k423kf44');
+		$cons = new Consumer('key', 'kd94hf93k423kf44');
 		$token = new OAuthToken('token', 'pfkkdhi9sl3r4s00');
 		
 		$request = OAuthRequest::from_consumer_and_token($cons, $token, 'POST', 'http://example.com');
@@ -288,7 +288,7 @@ class OAuthRequestTest extends PHPUnit_Framework_TestCase {
 		OAuthTestUtils::build_request('GET', 'http://photos.example.net/photos?'.$params);			
 		$r = OAuthRequest::from_request();
 		
-		$cons = new OAuthConsumer('key', 'kd94hf93k423kf44');
+		$cons = new Consumer('key', 'kd94hf93k423kf44');
 		$token = new OAuthToken('token', 'pfkkdhi9sl3r4s00');
 		
 		$hmac = new OAuthSignatureMethod_HMAC_SHA1();
@@ -305,7 +305,7 @@ class OAuthRequestTest extends PHPUnit_Framework_TestCase {
 		OAuthTestUtils::build_request('GET', 'http://photos.example.net/photos?'.$params);			
 		$r = OAuthRequest::from_request();
 		
-		$cons = new OAuthConsumer('key', 'kd94hf93k423kf44');
+		$cons = new Consumer('key', 'kd94hf93k423kf44');
 		$token = new OAuthToken('token', 'pfkkdhi9sl3r4s00');
 		
 		$hmac = new OAuthSignatureMethod_HMAC_SHA1();

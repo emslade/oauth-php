@@ -1,6 +1,6 @@
 <?php
 
-use OAuth\OAuthConsumer;
+use OAuth\Consumer;
 use OAuth\OAuthServer;
 use OAuth\OAuthToken;
 use OAuth\OAuthSignatureMethod_HMAC_SHA1;
@@ -22,7 +22,7 @@ class OAuthServerTest extends PHPUnit_Framework_TestCase {
 	private $server;
 	
 	public function setUp() {
-		$this->consumer       = new OAuthConsumer('key', 'secret');
+		$this->consumer       = new Consumer('key', 'secret');
 		$this->request_token  = new OAuthToken('requestkey', 'requestsecret');
 		$this->access_token   = new OAuthToken('accesskey', 'accesssecret');
 		
@@ -135,7 +135,7 @@ class OAuthServerTest extends PHPUnit_Framework_TestCase {
 	public function testRejectInvalidConsumer() {
 		// We use the consumer-key "unknown", which isn't known by the datastore. 
 		
-		$unknown_consumer = new OAuthConsumer('unknown', '__unused__');
+		$unknown_consumer = new Consumer('unknown', '__unused__');
 			
 		$request = OAuthRequest::from_consumer_and_token( $unknown_consumer, $this->access_token, 'POST', 'http://example.com');
 		$request->sign_request( $this->plaintext, $unknown_consumer, $this->access_token );

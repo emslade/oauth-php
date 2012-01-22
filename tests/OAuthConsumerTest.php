@@ -1,12 +1,12 @@
 <?php
 
-use OAuth\OAuthConsumer;
+use OAuth\Consumer;
 
 require 'common.php';
 
-class OAuthConsumerTest extends PHPUnit_Framework_TestCase {
+class ConsumerTest extends PHPUnit_Framework_TestCase {
 	public function testConvertToString() {
-		$consumer = new OAuthConsumer('key', 'secret');
+		$consumer = new Consumer('key', 'secret');
 		$this->assertEquals('OAuthConsumer[key=key,secret=secret]', (string) $consumer);
 	}
 }
