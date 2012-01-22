@@ -6,6 +6,7 @@ require dirname(__FILE__).'/../lib/OAuth/OAuth.php';
 require dirname(__FILE__).'/../lib/OAuth/Exception.php';
 require dirname(__FILE__).'/../lib/OAuth/Consumer.php';
 require dirname(__FILE__).'/../lib/OAuth/Token.php';
+require dirname(__FILE__).'/../lib/OAuth/Request.php';
 require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/SignatureMethod.php';
 require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/RSA_SHA1.php';
 require dirname(__FILE__).'/../lib/OAuth/SignatureMethod/HMAC_SHA1.php';
@@ -59,7 +60,7 @@ class OAuthTestUtils {
 		if( $method == 'POST' ) {
 			$_SERVER['HTTP_CONTENT_TYPE'] = 'application/x-www-form-urlencoded';
 			$_POST = parse_str($post_data);
-			OAuthRequest::$POST_INPUT = 'data:application/x-www-form-urlencoded,'.$post_data;
+			OAuth\Request::$POST_INPUT = 'data:application/x-www-form-urlencoded,'.$post_data;
 		}	
 			
 		if( $auth_header != '' ) {
